@@ -4,4 +4,7 @@ IMAGES="centos6-cdh5-base centos6-cdh5-datanode centos6-cdh5-historyserver cento
 
 for image in $IMAGES; do
   $image/docker-build.sh
+  if [ ! $? -eq 0 ]; then
+    exit 1
+  fi
 done
