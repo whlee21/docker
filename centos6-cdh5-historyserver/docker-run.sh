@@ -1,45 +1,15 @@
 #!/bin/bash
 
-set -e
+CONTAINER_ID=$(docker run -d -i -t \
+    --name hs \
+    --dns 172.17.42.1 --dns 168.126.63.1 --dns 168.126.63.2 \
+    -h hs \
+    -v "/data/hs/yarn/local:/data/yarn/local" \
+    -v "/data/hs/yarn/logs:/data/yarn/logs" \
+    "whlee21/centos6-cdh5-historyserver")
 
-if sudo docker ps | grep "whlee21/centos6-cdh5-resourcemanager" >/dev/null; then
-  echo ""
-  echo "It looks like you already have some containers running."
-  echo "Please take them down before attempting to bring up another"
-  echo "cluster with the following command:"
-  echo ""
-  echo "  make stop-cluster"
-  echo ""
+echo "Created container hs = ${CONTAINER_ID}"
 
-  exit 1
-fi
+#sleep 1
 
-for index in `seq 1 2`;
-do
-  CONTAINER_ID=$(docker run -d -i -t \
-    --name  "rm${index}" \
-    --dns 10.0.10.254 \
-    -h "rm${index}" \
-    -v "/data/rm${index}/yarn/local:/data/yarn/local" \
-    -v "/data/rm${index}/yarn/logs:/data/yarn/logs" \
-    "whlee21/centos6-cdh5-resourcemanager")
-
-  echo "Created container [rm${index}] = ${CONTAINER_ID}"
-
-  sleep 1
-
-  ip=$(expr ${index} + 6)
-
-  sudo ./bin/pipework br1 ${CONTAINER_ID} "10.0.10.${ip}/24"
-
-  echo "Started [rm${index}] and assigned it the IP [10.0.10.${ip}]"
-  
-  if [ "$index" -eq "1" ] ; then
-    sudo ifconfig br1 10.0.10.254
-    #sudo ip addr add 10.0.10.254/24 dev br1
-    echo "Created interface for host"
-    sleep 1
-  fi
-done
-
-sleep 1
+#sudo ./bin/pipework br1 ${CONTAINER_ID} "10.0.10.11/24@10.0.10.254"

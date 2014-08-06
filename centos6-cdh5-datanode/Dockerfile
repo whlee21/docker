@@ -6,14 +6,10 @@ ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
 
 RUN yum --disablerepo=cloudera-cdh5 --disablerepo=epel --enablerepo=local-cdh5 install -y  hadoop-yarn-nodemanager hadoop-hdfs-datanode hadoop-mapreduce hbase-regionserver
 
-#ADD conf /etc/hadoop/conf.docker
-#RUN alternatives --install /etc/hadoop/conf hadoop-conf /etc/hadoop/conf.docker 50
-#RUN alternatives --set hadoop-conf /etc/hadoop/conf.docker
-
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
 
 # for sshd
-EXPOSE 22 50010 50075 50020 8040 8042 8041 60020 60030
+EXPOSE 22 50010 50075 50020 8040 8042 8041 23080 60020 60030
   
 CMD chown -R hdfs:hdfs /data/dfs && chown -R yarn:yarn /data/yarn && "/usr/bin/supervisord"

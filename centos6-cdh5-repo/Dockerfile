@@ -12,6 +12,9 @@ RUN mv cloudera-cdh5/RPMS /var/www/html/cdh/5/
 
 RUN cd /var/www/html/cdh/5/ && createrepo .
 
+RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
+ADD ./supervisord.conf /etc/
+
 # for http
 EXPOSE 80
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 set -e
 
@@ -17,19 +17,17 @@ fi
 for index in `seq 3`;
 do
   CONTAINER_ID=$(docker run -d -i \
-    --name  "zk${index}" \
-    --dns 172.17.42.1 --dns 168.126.63.1 --dns 168.126.63.2 \
-    -h "zk${index}" \
+    -h "zoo${index}" \
     -e "ZOO_NODE_NUM=${index}" \
     -t "whlee21/centos6-cdh5-zookeeper")
 
-  echo "Created container [zk${index}] = ${CONTAINER_ID}"
+  echo "Created container [zoo${index}] = ${CONTAINER_ID}"
 
-#  sleep 1
+  sleep 1
 
-#  sudo ./bin/pipework br1 ${CONTAINER_ID} "10.0.10.${index}/24@10.0.10.254"
+  sudo ./bin/pipework docker0 ${CONTAINER_ID} "172.17.0.${index}/16"
 
-#  echo "Started [zk${index}] and assigned it the IP [10.0.10.${index}]"
+  echo "Started [zoo${index}] and assigned it the IP [10.0.10.${index}]"
   
 #  if [ "$index" -eq "1" ] ; then
 #    sudo ifconfig br1 10.0.10.254
@@ -40,3 +38,4 @@ do
 done
 
 sleep 1
+
