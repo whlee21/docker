@@ -23,14 +23,14 @@ RUN rpm -Uvh /opt/jdk-7u67-linux-x64.rpm
 RUN rm -f /opt/jdk-7u67-linux-x64.rpm
 
 # install cloudera repository
-ADD cloudera-cdh-5-0.x86_64.rpm cloudera-cdh-5-0.x86_64.rpm
-RUN yum --nogpgcheck localinstall -y cloudera-cdh-5-0.x86_64.rpm
+#ADD cloudera-cdh-5-0.x86_64.rpm cloudera-cdh-5-0.x86_64.rpm
+#RUN yum --nogpgcheck localinstall -y cloudera-cdh-5-0.x86_64.rpm
+#RUN rpm --import http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
+#RUN rm -f cloudera-cdh-5-0.x86_64.rpm
+#RUN yum -y update; yum clean all
 
-RUN rpm --import http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
-
-RUN rm -f cloudera-cdh-5-0.x86_64.rpm
-
-RUN yum -y update; yum clean all
+# install local cdh5 repository
+ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
 
 # no PAM
 RUN sed -i -e 's/^session\s\+required\s\+pam_loginuid\.so/#session required pam_loginuid.so/' /etc/pam.d/crond
@@ -47,9 +47,12 @@ ADD ./profile.d/jdk.sh /etc/profile.d/jdk.sh
 ADD ./profile.d/oozie.sh /etc/profile.d/oozie.sh
 
 ADD conf /etc/hadoop/conf.docker
-
 RUN alternatives --install /etc/hadoop/conf hadoop-conf /etc/hadoop/conf.docker 50
 RUN alternatives --set hadoop-conf /etc/hadoop/conf.docker
+
+ADD conf.hbase /etc/hbase/conf.docker
+RUN alternatives --install /etc/hbase/conf hbase-conf /etc/hbase/conf.docker 50
+RUN alternatives --set hbase-conf /etc/hbase/conf.docker
 
 # for sshd
 EXPOSE 22
