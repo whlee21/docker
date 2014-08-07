@@ -2,9 +2,7 @@ FROM whlee21/centos6-cdh5-base
 
 MAINTAINER Wanhee Lee <whlee21@gmail.com>
 
-ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
-
-RUN yum --disablerepo=cloudera-cdh5 --disablerepo=epel --enablerepo=local-cdh5 install -y zookeeper-server
+RUN yum --disablerepo=epel --enablerepo=local-cdh5 install -y zookeeper-server
 
 # Zookeeper dir
 RUN mkdir -p /var/lib/zookeeper
@@ -21,7 +19,10 @@ RUN service zookeeper-server init
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
 
+ADD ./node-init.sh /usr/local/bin/node-init.sh
+RUN chmod +x /usr/local/bin/node-init.sh
+
 # for sshd, zookeeper
 EXPOSE 22 2181 2888 3888
 
-CMD echo "${ZOO_NODE_NUM}" > /var/lib/zookeeper/myid && "/usr/bin/supervisord"
+CMD node-init.sh && "/usr/bin/supervisord"

@@ -2,9 +2,7 @@ FROM whlee21/centos6-cdh5-base
 
 MAINTAINER Wanhee Lee <whlee21@gmail.com>
 
-ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
-
-RUN yum --disablerepo=cloudera-cdh5 --disablerepo=epel --enablerepo=local-cdh5 install -y  hadoop-yarn-nodemanager hadoop-hdfs-datanode hadoop-mapreduce hbase-regionserver
+RUN yum --disablerepo=epel --enablerepo=local-cdh5 install -y  hadoop-yarn-nodemanager hadoop-hdfs-datanode hadoop-mapreduce hbase-regionserver
 
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/

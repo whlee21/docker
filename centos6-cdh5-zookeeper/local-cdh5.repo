@@ -1,4 +1,0 @@
-[local-cdh5]
-name=Cloudera's Distribution for Hadoop, Version 5 at local repository
-baseurl=http://cdh5repo.nablepjt.com/cdh/5/
-gpgcheck = 0

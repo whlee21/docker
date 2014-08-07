@@ -26,7 +26,7 @@
   </property>
   <property>
     <name>yarn.resourcemanager.ha.id</name>
-    <value>rm1</value>
+    <value>HA_ID</value>
   </property>
   <property>
     <name>yarn.resourcemanager.scheduler.class</name>

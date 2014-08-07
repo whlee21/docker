@@ -2,18 +2,16 @@ FROM whlee21/centos6-cdh5-base
 
 MAINTAINER Wanhee Lee <whlee21@gmail.com>
 
-ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
+RUN yum --disablerepo=epel --enablerepo=local-cdh5 install -y hadoop-hdfs-namenode hadoop-hdfs-zkfc
 
-RUN yum --disablerepo=cloudera-cdh5 --disablerepo=epel --enablerepo=local-cdh5 install -y hadoop-hdfs-namenode hadoop-hdfs-zkfc
-#RUN yum install -y hadoop-hdfs-namenode hadoop-hdfs-zkfc
-
-#ADD conf /etc/hadoop/conf.docker
-#RUN alternatives --install /etc/hadoop/conf hadoop-conf /etc/hadoop/conf.docker 50
-#RUN alternatives --set hadoop-conf /etc/hadoop/conf.docker
+RUN useradd -m sshfence
+RUN echo 'sshfence:sshfence123' | chpasswd
 
 ADD node-init.sh /usr/local/bin/node-init.sh
-
 RUN chmod +x /usr/local/bin/node-init.sh
+
+ADD sshkey-gen.sh /home/sshfence/sshkey-gen.sh
+RUN chmod +x /home/sshfence/sshkey-gen.sh
 
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
