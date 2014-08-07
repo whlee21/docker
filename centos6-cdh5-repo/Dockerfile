@@ -28,6 +28,6 @@ RUN mv cloudera-cdh5/RPMS /var/www/html/cdh/5/
 RUN cd /var/www/html/cdh/5/ && createrepo .
 
 # for http
-EXPOSE 80
+EXPOSE 22 80
 
 CMD ["/usr/bin/supervisord"]

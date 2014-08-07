@@ -18,25 +18,27 @@ for index in `seq 3`;
 do
   CONTAINER_ID=$(docker run -d -i \
     --name  "zk${index}" \
-    --dns 172.17.42.1 --dns 168.126.63.1 --dns 168.126.63.2 \
+    --dns 10.0.10.1 --dns 168.126.63.1 --dns 168.126.63.2 \
     -h "zk${index}" \
     -e "ZOO_NODE_NUM=${index}" \
     -t "whlee21/centos6-cdh5-zookeeper")
 
   echo "Created container [zk${index}] = ${CONTAINER_ID}"
 
-#  sleep 1
+  sleep 1
 
-#  sudo ./bin/pipework br1 ${CONTAINER_ID} "10.0.10.${index}/24@10.0.10.254"
+  IP_ADDR=$(dig +short zk${index} A)
 
-#  echo "Started [zk${index}] and assigned it the IP [10.0.10.${index}]"
+  sudo ./bin/pipework br1 ${CONTAINER_ID} ${IP_ADDR}/24@10.0.10.1
+
+  echo "Started [zk${index}] and assigned it the IP [${IP_ADDR}]"
   
-#  if [ "$index" -eq "1" ] ; then
-#    sudo ifconfig br1 10.0.10.254
-#    #sudo ip addr add 10.0.10.254/24 dev br1
-#    echo "Created interface for host"
-#    sleep 1
-#  fi
+  if [ "$index" -eq "1" ] ; then
+    sudo ifconfig br1 10.0.10.1/24
+    #sudo ip addr add 10.0.10.254/24 dev br1
+    echo "Created interface for host"
+    sleep 1
+  fi
 done
 
 sleep 1
