@@ -34,7 +34,7 @@ do
   echo "Started [jn${index}] and assigned it the IP [${IP_ADDR}]"
   
   if [ "$index" -eq "1" ] ; then
-    sudo ifconfig br1 10.0.10.254/24
+    sudo ifconfig br1 10.0.10.1/24
     #sudo ip addr add 10.0.10.254/24 dev br1
     echo "Created interface for host"
     sleep 1

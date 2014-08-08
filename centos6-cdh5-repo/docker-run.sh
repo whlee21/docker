@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CONTAINER_ID=$(docker run -d -i -t \
+    --net=none \
     --name cdh5repo \
     --dns 10.0.10.1 \
     -h cdh5repo \
