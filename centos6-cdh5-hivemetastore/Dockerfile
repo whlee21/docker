@@ -18,6 +18,9 @@ ADD ./supervisord.conf /etc/
 ADD ./node-init.sh /usr/local/bin/node-init.sh
 RUN chmod +x /usr/local/bin/node-init.sh
 
+ADD ./init-schema.sh /root/init-schema.sh
+RUN chmod +x /root/init-schema.sh
+
 # for sshd
 EXPOSE 22 60000 60010
 
