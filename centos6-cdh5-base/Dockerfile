@@ -11,7 +11,10 @@ RUN rm -f /etc/localtime
 RUN ln -s /usr/share/zoneinfo/ROK /etc/localtime
 
 RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-RUN yum --enablerepo=epel install -y supervisor
+
+RUN yum --enablerepo=epel install -y python-meld3 python-setuptools
+
+RUN rpm -Uvh ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/presbrey:/py/EL6/noarch/supervisor-3.0-13.1.noarch.rpm
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
 

@@ -10,6 +10,12 @@ RUN echo 'sshfence:sshfence123' | chpasswd
 ADD node-init.sh /usr/local/bin/node-init.sh
 RUN chmod +x /usr/local/bin/node-init.sh
 
+ADD active-node-init.sh /root/active-node-init.sh
+RUN chmod +x /root/active-node-init.sh
+
+ADD standby-node-init.sh /root/standby-node-init.sh
+RUN chmod +x /root/standby-node-init.sh
+
 ADD sshkey-gen.sh /home/sshfence/sshkey-gen.sh
 RUN chmod +x /home/sshfence/sshkey-gen.sh
 
@@ -19,4 +25,4 @@ ADD ./supervisord.conf /etc/
 # for sshd
 EXPOSE 22 8020 50070
 
-CMD node-init.sh && "/usr/bin/supervisord"
+CMD ["/usr/bin/supervisord"]
