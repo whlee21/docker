@@ -12,13 +12,13 @@ RUN ln -s /usr/share/zoneinfo/ROK /etc/localtime
 
 RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
-RUN yum --enablerepo=epel install -y python-meld3 python-setuptools
+RUN yum --enablerepo=epel install -y python-meld3 python-setuptools acl alsa-lib at atk avahi-libs bc cairo cdparanoia-libs cups cups-libs cvs db4-cxx db4-devel dbus ed file fontconfig foomatic foomatic-db foomatic-db-filesystem foomatic-db-ppds freetype gdbm-devel gettext ghostscript ghostscript-fonts glibc-devel glibc-headers gnutls gstreamer gstreamer-plugins-base gstreamer-tools gtk2 hicolor-icon-theme iso-codes jasper-libs kernel-headers lcms-libs libICE libSM libX11 libX11-common libXau libXcomposite libXcursor libXdamage libXext libXfixes libXfont libXft libXi libXinerama libXrandr libXrender libXt libXtst libXv libXxf86vm libcap-ng libdrm libfontenc libgomp libgudev1 libjpeg-turbo libmng libogg liboil libpciaccess libpng libthai libtheora libtiff libudev libuser libvisual libvorbis libxcb m4 mailx man mesa-dri-drivers mesa-dri-filesystem mesa-dri1-drivers mesa-libGL mesa-libGLU mesa-private-llvm openjpeg-libs pango passwd patch pax perl-CGI perl-ExtUtils-MakeMaker perl-ExtUtils-ParseXS perl-Test-Harness perl-Test-Simple perl-devel phonon-backend-gstreamer pixman poppler poppler-data poppler-utils portreserve qt qt-sqlite qt-x11 qt3 redhat-lsb redhat-lsb-compat redhat-lsb-core redhat-lsb-graphics redhat-lsb-printing tar time tmpwatch urw-fonts xml-common xorg-x11-font-utils xz xz-lzma-compat wget unzip openssh-server openssh-clients rsyslog cronie-noanacron vim sudo; yum clean all
 
 RUN rpm -Uvh ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/presbrey:/py/EL6/noarch/supervisor-3.0-13.1.noarch.rpm
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
 
-RUN yum install -y wget unzip openssh-server openssh-clients rsyslog cronie-noanacron vim sudo; yum clean all
+#RUN yum install -y wget unzip openssh-server openssh-clients rsyslog cronie-noanacron vim sudo; yum clean all
 
 # install oracle-jdk-1.7
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u67-b01/jdk-7u67-linux-x64.rpm" -O /opt/jdk-7u67-linux-x64.rpm
@@ -30,7 +30,8 @@ RUN rm -f /opt/jdk-7u67-linux-x64.rpm
 #RUN yum --nogpgcheck localinstall -y cloudera-cdh-5-0.x86_64.rpm
 #RUN rpm --import http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
 #RUN rm -f cloudera-cdh-5-0.x86_64.rpm
-#RUN yum -y update; yum clean all
+
+RUN yum -y update; yum clean all
 
 # install local cdh5 repository
 ADD local-cdh5.repo /etc/yum.repos.d/local-cdh5.repo
