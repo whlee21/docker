@@ -58,6 +58,12 @@ ADD conf.hbase /etc/hbase/conf.docker
 RUN alternatives --install /etc/hbase/conf hbase-conf /etc/hbase/conf.docker 50
 RUN alternatives --set hbase-conf /etc/hbase/conf.docker
 
+# writable hosts file
+#RUN cp /etc/hosts /tmp/hosts
+#RUN mkdir -p -- /lib-override && cp /lib64/libnss_files.so.2 /lib-override
+#RUN perl -pi -e 's:/etc/hosts:/tmp/hosts:g' /lib-override/libnss_files.so.2
+#ENV LD_LIBRARY_PATH /lib-override
+
 # for sshd
 EXPOSE 22
 
@@ -66,6 +72,3 @@ CMD ["/usr/bin/supervisord"]
 # setup vim
 RUN echo 'syntax on' >> /root/.vimrc
 RUN echo 'alias vi="vim"' >> /root/.bashrc
-
-
-

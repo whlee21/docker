@@ -57,6 +57,12 @@
   </property>
 
   <property>
+    <name>hbase.regionserver.dns.interface</name>
+    <value>eth1</value>
+  </property>
+
+  <!--
+  <property>
     <name>hbase.bucketcache.ioengine</name>
     <value>offheap</value>
   </property>
@@ -68,4 +74,5 @@
     <name>hbase.bucketcache.size</name>
     <value>5120</value>
   </property>
+  -->
 </configuration>

@@ -7,6 +7,8 @@ RUN yum --disablerepo=epel --enablerepo=local-cdh5 install -y  hadoop-yarn-nodem
 RUN mv -f /etc/supervisord.conf /etc/supervisord.conf.org
 ADD ./supervisord.conf /etc/
 
+ENV LD_LIBRARY_PATH /lib-override
+
 # for sshd
 EXPOSE 22 50010 50075 50020 8040 8042 8041 23080 60020 60030
   
