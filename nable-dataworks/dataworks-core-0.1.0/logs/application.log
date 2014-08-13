@@ -1,0 +1,15 @@
+15:45:40.872 [INFO] [main] [Logger.scala:info:93] play 
+Application started (Prod)
+
+15:45:40.917 [DEBUG] [main] [JdkLogger.java:debug:36] o.j.n.c.socket.nio.SelectorUtil 
+Using select timeout of 500
+
+15:45:40.918 [DEBUG] [main] [JdkLogger.java:debug:36] o.j.n.c.socket.nio.SelectorUtil 
+Epoll-bug workaround enabled = false
+
+15:45:40.978 [INFO] [main] [Logger.scala:info:93] play 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+15:45:42.848 [INFO] [play-akka.actor.default-dispatcher-2] [Slf4jLogger.scala:applyOrElse:80] akka.event.slf4j.Slf4jLogger 
+Slf4jLogger started
+

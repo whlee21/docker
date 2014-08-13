@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>models - dataworks.hcat.models</title>
+          <meta name="description" content="models - dataworks.hcat.models" />
+          <meta name="keywords" content="models dataworks.hcat.models" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'dataworks.hcat.models.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="dataworks">dataworks</a>.<a href="../package.html" class="extype" name="dataworks.hcat">hcat</a></p>
+        <h1>models</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">models</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="dataworks.hcat.models.ClusterSortOrderModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClusterSortOrderModelextendsProductwithSerializable"></a>
+      <a id="ClusterSortOrderModel:ClusterSortOrderModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterSortOrderModel.html"><span class="name">ClusterSortOrderModel</span></a><span class="params">(<span name="columnName">columnName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="order">order: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.ClusteredByModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClusteredByModelextendsProductwithSerializable"></a>
+      <a id="ClusteredByModel:ClusteredByModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusteredByModel.html"><span class="name">ClusteredByModel</span></a><span class="params">(<span name="columnNames">columnNames: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="sortedBy">sortedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="ClusterSortOrderModel.html" class="extype" name="dataworks.hcat.models.ClusterSortOrderModel">ClusterSortOrderModel</a>]]</span>, <span name="numberOfBuckets">numberOfBuckets: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.ColumnModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColumnModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="ColumnModel:ColumnModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ColumnModel.html"><span class="name">ColumnModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="type">type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="comment">comment: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.DatabaseModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DatabaseModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="DatabaseModel:DatabaseModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DatabaseModel.html"><span class="name">DatabaseModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="location">location: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="comment">comment: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="properties">properties: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.GroupPermissionsModel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GroupPermissionsModelextendsAnyRef"></a>
+      <a id="GroupPermissionsModel:GroupPermissionsModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GroupPermissionsModel.html"><span class="name">GroupPermissionsModel</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.PartitionModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="PartitionModel:PartitionModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionModel.html"><span class="name">PartitionModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="location">location: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.RowFormatModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RowFormatModelextendsProductwithSerializable"></a>
+      <a id="RowFormatModel:RowFormatModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RowFormatModel.html"><span class="name">RowFormatModel</span></a><span class="params">(<span name="fieldsTerminatedBy">fieldsTerminatedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="collectionItemsTerminatedBy">collectionItemsTerminatedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="mapKeysTerminatedBy">mapKeysTerminatedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="linesTerminatedBy">linesTerminatedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="serde">serde: <span class="extype" name="scala.Option">Option</span>[<a href="SerdeModel.html" class="extype" name="dataworks.hcat.models.SerdeModel">SerdeModel</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.SerdeModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SerdeModelextendsProductwithSerializable"></a>
+      <a id="SerdeModel:SerdeModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SerdeModel.html"><span class="name">SerdeModel</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.StorageFormatModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StorageFormatModelextendsProductwithSerializable"></a>
+      <a id="StorageFormatModel:StorageFormatModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StorageFormatModel.html"><span class="name">StorageFormatModel</span></a><span class="params">(<span name="rowFormat">rowFormat: <span class="extype" name="scala.Option">Option</span>[<a href="RowFormatModel.html" class="extype" name="dataworks.hcat.models.RowFormatModel">RowFormatModel</a>]</span>, <span name="storedAs">storedAs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="storedBy">storedBy: <span class="extype" name="scala.Option">Option</span>[<a href="StoredByModel.html" class="extype" name="dataworks.hcat.models.StoredByModel">StoredByModel</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.StoredByModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StoredByModelextendsProductwithSerializable"></a>
+      <a id="StoredByModel:StoredByModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StoredByModel.html"><span class="name">StoredByModel</span></a><span class="params">(<span name="className">className: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="properties">properties: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.TableLikeModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TableLikeModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="TableLikeModel:TableLikeModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TableLikeModel.html"><span class="name">TableLikeModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="external">external: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="location">location: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.TableModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TableModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="TableModel:TableModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TableModel.html"><span class="name">TableModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="external">external: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="comment">comment: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="columns">columns: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="ColumnModel.html" class="extype" name="dataworks.hcat.models.ColumnModel">ColumnModel</a>]]</span>, <span name="partitionedBy">partitionedBy: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="ColumnModel.html" class="extype" name="dataworks.hcat.models.ColumnModel">ColumnModel</a>]]</span>, <span name="clusteredBy">clusteredBy: <span class="extype" name="scala.Option">Option</span>[<a href="ClusteredByModel.html" class="extype" name="dataworks.hcat.models.ClusteredByModel">ClusteredByModel</a>]</span>, <span name="format">format: <span class="extype" name="scala.Option">Option</span>[<a href="StorageFormatModel.html" class="extype" name="dataworks.hcat.models.StorageFormatModel">StorageFormatModel</a>]</span>, <span name="location">location: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tableProperties">tableProperties: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hcat.models.TablePropertyModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TablePropertyModelextendsGroupPermissionsModelwithProductwithSerializable"></a>
+      <a id="TablePropertyModel:TablePropertyModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TablePropertyModel.html"><span class="name">TablePropertyModel</span></a><span class="params">(<span name="group">group: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="permissions">permissions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="GroupPermissionsModel.html" class="extype" name="dataworks.hcat.models.GroupPermissionsModel">GroupPermissionsModel</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+    </body>
+      </html>

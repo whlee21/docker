@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>hbase - dataworks.hbase</title>
+          <meta name="description" content="hbase - dataworks.hbase" />
+          <meta name="keywords" content="hbase dataworks.hbase" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'dataworks.hbase.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="dataworks">dataworks</a></p>
+        <h1>hbase</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbase</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="dataworks.hbase.ByteArrayComparableModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteArrayComparableModelextendsProductwithSerializable"></a>
+      <a id="ByteArrayComparableModel:ByteArrayComparableModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteArrayComparableModel.html"><span class="name">ByteArrayComparableModel</span></a><span class="params">(<span name="type">type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="op">op: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.FilterModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilterModelextendsProductwithSerializable"></a>
+      <a id="FilterModel:FilterModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FilterModel.html"><span class="name">FilterModel</span></a><span class="params">(<span name="type">type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="op">op: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="comparator">comparator: <span class="extype" name="scala.Option">Option</span>[<a href="ByteArrayComparableModel.html" class="extype" name="dataworks.hbase.ByteArrayComparableModel">ByteArrayComparableModel</a>] = <span class="symbol">scala.None</span></span>, <span name="value">value: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="filters">filters: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.List">List</span>[<a href="FilterModel.html" class="extype" name="dataworks.hbase.FilterModel">FilterModel</a>]] = <span class="symbol">scala.None</span></span>, <span name="limit">limit: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">scala.None</span></span>, <span name="offset">offset: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">scala.None</span></span>, <span name="family">family: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="qualifier">qualifier: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="ifMissing">ifMissing: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">scala.None</span></span>, <span name="latestVersion">latestVersion: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">scala.None</span></span>, <span name="minColumn">minColumn: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="minColumnInclusive">minColumnInclusive: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">scala.None</span></span>, <span name="maxColumn">maxColumn: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="maxColumnInclusive">maxColumnInclusive: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">scala.None</span></span>, <span name="dropDependentColumn">dropDependentColumn: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">scala.None</span></span>, <span name="chance">chance: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Float">Float</span>] = <span class="symbol">scala.None</span></span>, <span name="prefixes">prefixes: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">scala.None</span></span>, <span name="timestamps">timestamps: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Long">Long</span>]] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.MetricsREST" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MetricsRESTextendsAnyRef"></a>
+      <a id="MetricsREST:MetricsREST"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MetricsREST.html"><span class="name">MetricsREST</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.ResultGenerator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ResultGeneratorextendsIterator[org.apache.hadoop.hbase.Cell]"></a>
+      <a id="ResultGenerator:ResultGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ResultGenerator.html"><span class="name">ResultGenerator</span></a><span class="result"> extends <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="org.apache.hadoop.hbase.Cell">Cell</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.RowResultGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RowResultGeneratorextendsResultGenerator"></a>
+      <a id="RowResultGenerator:RowResultGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RowResultGenerator.html"><span class="name">RowResultGenerator</span></a><span class="result"> extends <a href="ResultGenerator.html" class="extype" name="dataworks.hbase.ResultGenerator">ResultGenerator</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.ScannerResultGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScannerResultGeneratorextendsResultGenerator"></a>
+      <a id="ScannerResultGenerator:ScannerResultGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScannerResultGenerator.html"><span class="name">ScannerResultGenerator</span></a><span class="result"> extends <a href="ResultGenerator.html" class="extype" name="dataworks.hbase.ResultGenerator">ResultGenerator</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="dataworks.hbase.HBaseManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HBaseManager"></a>
+      <a id="HBaseManager:HBaseManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="HBaseManager$.html"><span class="name">HBaseManager</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.ResultGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResultGenerator"></a>
+      <a id="ResultGenerator:ResultGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ResultGenerator$.html"><span class="name">ResultGenerator</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.ScannerResultGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScannerResultGenerator"></a>
+      <a id="ScannerResultGenerator:ScannerResultGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScannerResultGenerator$.html"><span class="name">ScannerResultGenerator</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="dataworks.hbase.controllers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="controllers"></a>
+      <a id="controllers:controllers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="controllers/package.html"><span class="name">controllers</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+    </body>
+      </html>

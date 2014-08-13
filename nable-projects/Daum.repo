@@ -1,0 +1,12 @@
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://ftp.daum.net/centos/$releasever/os/$basearch/
+gpgcheck=0 
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=http://ftp.daum.net/centos/$releasever/updates/$basearch/
+gpgcheck=0
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://ftp.daum.net/centos/$releasever/extras/$basearch/
+gpgcheck=0
