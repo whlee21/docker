@@ -1,20 +1,10 @@
 #!/bin/bash
 
 CONTAINER_ID=$(docker run -d -i -t \
-    --name cdh5repo \
+    --name nablepjt \
     --dns 172.17.42.1 \
-    -h cdh5repo \
-    "whlee21/centos6-cdh5-repo")
+    -h nablepjt \
+    -p 9000:9000 \
+    "whlee21/nable-projects")
 
-echo "Created container cdh5repo = ${CONTAINER_ID}"
-
-#sleep 1
-
-#IP_ADDR=$(dig +short cdh5repo A)
-
-#if [ ! "${IP_ADDR}" = "" ]; then
-#  sudo ./bin/pipework br1 ${CONTAINER_ID} "${IP_ADDR}/24@10.0.10.1"
-#  sudo ifconfig br1 10.0.10.1/24
-#else
-#  echo "IP address for cdh5repo NOT found."
-#fi
+echo "Created container nablepjt = ${CONTAINER_ID}"

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build --rm -t whlee21/centos6-cdh5-nablepjt `dirname $0`
+docker build --rm -t whlee21/nable-projects `dirname $0`
 docker images

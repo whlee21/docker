@@ -1,0 +1,7 @@
+hbase.conf.error = hbase.zookeeper.quorum value not found in application.conf
+
+error.header = error
+error.not_implemented = not implemented
+
+project.create.empty.error = cannot create an empty project
+project.create.invalid.error = cannot create a project for project code = %1, project name = %2
